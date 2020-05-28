@@ -98,7 +98,7 @@ class SuggestionForm extends React.Component {
                     <div className="row">
                         <div className="input-field col s12">
                             <i className="material-icons prefix">account_circle</i>
-                            <input name="name" id="name" type="text" className="validate autocomplete"
+                            <input name="name" id="name" type="text" className="validate"{/*TODO: momenteel niet veilig. Check npm audit.   autocomplete*/}
                                    onChange={this.updateState} value={this.state.name}/>
                             <label htmlFor="name">Name</label>
                         </div>

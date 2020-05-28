@@ -21,6 +21,7 @@ import DrugDealer from "./Components/Content/DrugDealer/DrugDealer";
 // Constanten opslaan in file
 // Error 404 na bezoeken van ongeldige pagina in /suggestions
 // Daarbij hoort ook het fixen van de nested routers
+// Categoriën toevoegen aan de suggesties
 
 class App extends React.Component {
     constructor(props) {
