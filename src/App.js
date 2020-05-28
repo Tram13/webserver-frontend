@@ -18,7 +18,6 @@ import DrugDealer from "./Components/Content/DrugDealer/DrugDealer";
 // pagina maken voor virtual drug dealer
 // Amber
 // Ardennen
-// Update/Delete suggestions
 // Constanten opslaan in file
 // Error 404 na bezoeken van ongeldige pagina in /suggestions
 // Daarbij hoort ook het fixen van de nested routers
@@ -85,10 +84,10 @@ class App extends React.Component {
                             <Route exact path="/suggestions/create">
                                 <SuggestionForm api={this.state.api} updateSelected={this.updateSelected}/>
                             </Route>
-                            <Route exact path="/suggestions/*/delete"> {/*TODO: delete*/}
+                            <Route exact path="/suggestions/:id/delete"> {/*TODO: delete*/}
                                 <h1>Delete lol</h1>
                             </Route>
-                            <Route exact path="/suggestions/*/update"> {/*TODO: update*/}
+                            <Route exact path="/suggestions/:id/update"> {/*TODO: update*/}
                                 <SuggestionForm api={this.state.api} updateSelected={this.updateSelected}/>
                             </Route>
                         </Route>
