@@ -47,13 +47,14 @@ class Jonas extends React.Component {
                         <table>
                             <tbody>
                             <tr className={"no-border"}>
-                                <td><h5>Jonas komt niet naar HashCode omdat hij ballen zuigt.</h5></td>
-                                <td><h5>We waren 5de btw, take that Jonas</h5></td>
+                                <td><h5>Jonas komt niet naar HashCode omdat hij stout was.</h5></td>
+                                <td><h5>We waren 5de* btw, take that Jonas</h5></td>
                             </tr>
                             <tr className={"no-border"}>
                                 <td>{kop1}</td>
                                 <td>{kop2}</td>
                             </tr>
+                            <p>*technisch gezien correct</p>
                             </tbody>
                         </table>
                     </div>

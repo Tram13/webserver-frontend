@@ -45,7 +45,7 @@ class Wout extends React.Component {
         } else {
             return (
                 <div className={"padded-left"}>
-                    <h3>Wout zuigt ballen in WebDev</h3>
+                    <h3>Wout pest de assistent van WebDev</h3>
                     <div>
                         <h5>when you sudo reboot and it doesn't work anymore</h5>
                         <table>
