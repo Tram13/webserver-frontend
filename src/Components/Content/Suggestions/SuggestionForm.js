@@ -2,7 +2,8 @@ import React from "react";
 import M from "materialize-css"
 import Suggestion from "../../../DTO/Suggestion"
 import postSuggestion from "../../../APIHelper/Suggestion/PostSuggestion";
-import { Redirect, Link } from "react-router-dom";
+import patchSuggestion from "../../../APIHelper/Suggestion/PatchSuggestion";
+import {Link, matchPath, Redirect} from "react-router-dom";
 
 class SuggestionForm extends React.Component {
 
@@ -10,10 +11,25 @@ class SuggestionForm extends React.Component {
         super(props);
         this.state = {
             redirect: false,
-            name: undefined,
-            message: undefined
+            name: '',
+            message: ''
         };
+        this.id = this.getID(); // ID of suggestion if updating, else undefined
         this.props.updateSelected("suggestions");
+
+    }
+
+    getID = () => {
+        // TODO: na het toevoegen van een mooie router is dit miss niet meer nodig / kan verbeterd worden.
+        //  Doe dit dan ook x)
+        const match = matchPath(window.location.pathname, {
+            path: "/suggestions/:id/update"
+        })
+        if (match) {
+            return match.params.id;
+        } else {
+            return undefined;
+        }
     }
 
     updateState = (event) => {
@@ -33,14 +49,15 @@ class SuggestionForm extends React.Component {
         })
     };
 
-    createNew = () => {
-        const newSuggestion = new Suggestion(this.state.name, this.state.message, this.props.api['suggestions']);
-        postSuggestion(newSuggestion).then(r => this.sendAlert(r, "Adding"))
-    };
-
     submit = (event) => { // Zoals voorgesteld in https://reactjs.org/docs/forms.html
         event.preventDefault();
-        this.createNew();
+        if (this.id) {
+            const suggestion = new Suggestion(this.state.name, this.state.message, this.props.api['suggestions'] + "/" + this.id);
+            patchSuggestion(suggestion).then(r => this.sendAlert(r, "Updating"))
+        } else {
+            const suggestion = new Suggestion(this.state.name, this.state.message, this.props.api['suggestions']);
+            postSuggestion(suggestion).then(r => this.sendAlert(r, "Adding"))
+        }
     };
 
     componentDidMount() {
@@ -54,7 +71,21 @@ class SuggestionForm extends React.Component {
                 "Wout": null
             }
         });
-        M.updateTextFields();
+        if (this.id) {
+            fetch(this.props.api["suggestions"]).then(
+                response => (response.json()
+                    .then(r => {
+                        const sug = r.suggestions.filter(sug => sug._id === this.id)[0]
+                        this.setState({
+                            name: sug.author,
+                            message: sug.message
+                        });
+                        M.updateTextFields();
+                    }))
+            );
+        } else {
+            M.updateTextFields();
+        }
     }
 
     render() {
@@ -67,8 +98,9 @@ class SuggestionForm extends React.Component {
                     <div className="row">
                         <div className="input-field col s12">
                             <i className="material-icons prefix">account_circle</i>
-                            <input name="name" id="name" type="text" className="validate autocomplete"
-                                   onChange={this.updateState}/>
+                            {/*TODO: momenteel niet veilig. Check npm audit.   autocomplete*/}
+                            <input name="name" id="name" type="text" className="validate"
+                                   onChange={this.updateState} value={this.state.name}/>
                             <label htmlFor="name">Name</label>
                         </div>
                     </div>
@@ -76,11 +108,11 @@ class SuggestionForm extends React.Component {
                         <div className="input-field col s12">
                             <i className="material-icons prefix">textsms</i>
                             <textarea name="message" id="textarea1" className="materialize-textarea"
-                                      onChange={this.updateState}/>
+                                      onChange={this.updateState} value={this.state.message}/>
                             <label htmlFor="textarea1">Your suggestion: </label>
                         </div>
                     </div>
-                    <button className="btn waves-effect waves-light" type="submit">Submit
+                    <button className="btn waves-effect waves-light" type="submit">{this.id ? "Update" : "Create"}
                         <i className="material-icons right">send</i>
                     </button>
                     {/*TODO: de cancel knop moet "back" gaan, niet naar het overzicht*/}

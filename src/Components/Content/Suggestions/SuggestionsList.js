@@ -39,7 +39,7 @@ class SuggestionsList extends React.Component {
                     <td key={suggestion._id + suggestion.message}>{suggestion.message}</td>
                     <td key={suggestion._id + "Update"}>
                         <Link to={"/suggestions/" + suggestion._id + "/update"}
-                              className="waves-effect waves-light btn-small red lighten-2 right-align">
+                              className="waves-effect waves-light btn-small red lighten-2 right">
                             <i className="material-icons left">
                                 edit
                             </i>
@@ -48,7 +48,7 @@ class SuggestionsList extends React.Component {
                     </td>
                     <td key={suggestion._id + "Delete"}>
                         <button data-target={suggestion._id}
-                                className="btn-small modal-trigger waves-effect waves-light red right-align">
+                                className="btn-small modal-trigger waves-effect waves-light red right">
                             Delete
                             <i className="material-icons left">
                                 delete_forever

@@ -15,7 +15,7 @@ class Home extends React.Component {
         const url = this.props.api["home"];
         fetch(url).then(
             response => (response.json()
-                    .then((r) => {
+                    .then(r => {
                             this.setState(
                                 {
                                     data: r,
