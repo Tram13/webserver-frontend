@@ -12,10 +12,12 @@ class DrugDealer extends React.Component {
         this.rg = new RandomGenerator();
         this.eventGenerator = new EventGenerator();
         this.cash = 2500;
-        this.daysleft = 32;
+        this.daysleft = 31;
+        this.marketplace.updatePrices();
     }
 
-    nextDay = () => {
+    nextDay = (event) => {
+        event.preventDefault();
         if (this.daysleft > 0) {
             this.marketplace.updatePrices();
             this.eventGenerator.applyRandomEvent();
@@ -23,11 +25,35 @@ class DrugDealer extends React.Component {
             // Because the state itself doesn't get updated
             this.forceUpdate();
         }
+        else {
+            alert("Game finished with $" + this.cash);
+        }
+    };
+
+    onClickSell = (event) => {
+        event.preventDefault();
+        const amount = 1;
+        const drug = this.marketplace.findDrugByName(event.target.id);
+        if (drug.owned >= amount) {
+            drug.sell(amount);
+            this.cash += drug.price * amount;
+            this.forceUpdate();
+        } else {
+            alert("Not enough drugs in inventory!");
+        }
     };
 
     onClickBuy = (event) => {
         event.preventDefault();
-        this.marketplace.findDrugByName(event.target.id).buy(1);
+        const amount = 1
+        const drug = this.marketplace.findDrugByName(event.target.id);
+        if (this.cash >= drug.price) {
+            this.cash -= drug.price * amount;
+            drug.buy(amount);
+            this.forceUpdate();
+        } else {
+            alert("Not enough cash!");
+        }
     };
 
     drugsToTableRows = () => {
@@ -35,14 +61,23 @@ class DrugDealer extends React.Component {
             (drug) =>
                 <tr key={drug.name}>
                     <td className="padded-left" key={drug.name + "Name"}>{drug.name}</td>
-                    <td key={drug.name + "Price"}>{"€" + drug.price}</td>
+                    <td key={drug.name + "Price"}>{"$" + drug.price}</td>
                     <td key={drug.name + "Buy"}>
-                        <a href={"#!"} id={drug.name} className="waves-effect waves-light btn" onClick={this.onClickBuy}>
+                        <a href={"#!"} id={drug.name} className="waves-effect waves-light btn"
+                           onClick={this.onClickBuy}>
                             <i id={drug.name} className="material-icons right">attach_money</i>
                             Buy
                         </a>
                     </td>
                     <td key={drug.name + "Owned"}>{drug.owned}</td>
+                    <td key={drug.name + "BoughtAt"}>{drug.boughtAt !== undefined ? "$" + drug.boughtAt : ""}</td>
+                    <td key={drug.name + "Sell"}>
+                        <a href={"#!"} id={drug.name} className="waves-effect waves-light btn"
+                           onClick={this.onClickSell}>
+                            <i id={drug.name} className="material-icons right">attach_money</i>
+                            Sell
+                        </a>
+                    </td>
                 </tr>
         );
     };
@@ -57,13 +92,17 @@ class DrugDealer extends React.Component {
                         <th key="drugPrice">Price</th>
                         <th key="drugBuy">Buy</th>
                         <th key="drugOwned">Owned</th>
+                        <th key="drugBoughtAt">Last bought at</th>
+                        <th key="drugSell">Sell</th>
                     </tr>
                     </thead>
                     <tbody>
                     {this.drugsToTableRows()}
                     </tbody>
                 </table>
-                <a href={"#!"} className="waves-effect waves-light btn" onClick={this.nextDay}>button</a>
+                <a href={"#!"} className="waves-effect waves-light btn" onClick={this.nextDay}>Next Day</a>
+                <a className="btn-flat disabled">Current cash: ${this.cash}</a>
+                <a className="btn-flat disabled">Days left: {this.daysleft}</a>
             </div>
         )
     }

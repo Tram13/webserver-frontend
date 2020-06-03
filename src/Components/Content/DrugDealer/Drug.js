@@ -9,15 +9,12 @@ class Drug {
     buy(amount) {
         this.owned += amount;
         this.boughtAt = this.price;
-        return true;
     }
 
     sell(amount) {
-        if (this.owned > amount) {
-            return false;
-        } else {
-            this.owned -= amount;
-            return true;
+        this.owned -= amount;
+        if (this.owned === 0) {
+            this.boughtAt = undefined;
         }
     }
 }
