@@ -102,6 +102,7 @@ class App extends React.Component {
                             <Error404 updateSelected={this.updateSelected}/>
                         </Route>
                     </Switch>
+                    <div>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
                 </Router>
             )
         }
