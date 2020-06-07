@@ -22,6 +22,7 @@ import DrugDealer from "./Components/Content/DrugDealer/DrugDealer";
 // Error 404 na bezoeken van ongeldige pagina in /suggestions
 // Daarbij hoort ook het fixen van de nested routers
 // Categoriën toevoegen aan de suggesties
+// Cooldown zetten op suggesties toevoegen
 
 class App extends React.Component {
     constructor(props) {
@@ -85,10 +86,7 @@ class App extends React.Component {
                             <Route exact path="/suggestions/create">
                                 <SuggestionForm api={this.state.api} updateSelected={this.updateSelected}/>
                             </Route>
-                            <Route exact path="/suggestions/:id/delete"> {/*TODO: delete*/}
-                                <h1>Delete lol</h1>
-                            </Route>
-                            <Route exact path="/suggestions/:id/update"> {/*TODO: update*/}
+                            <Route exact path="/suggestions/:id/update">
                                 <SuggestionForm api={this.state.api} updateSelected={this.updateSelected}/>
                             </Route>
                         </Route>
@@ -102,6 +100,7 @@ class App extends React.Component {
                             <Error404 updateSelected={this.updateSelected}/>
                         </Route>
                     </Switch>
+                    <div className="pin-bottom">Icon made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
                 </Router>
             )
         }
