@@ -13,6 +13,7 @@ import SuggestionsList from "./Components/Content/Suggestions/SuggestionsList";
 import SuggestionForm from "./Components/Content/Suggestions/SuggestionForm";
 import Amber from "./Components/Content/Amber";
 import DrugDealer from "./Components/Content/DrugDealer/DrugDealer";
+import Ardennen from "./Components/Content/Ardennen";
 
 //TODO's:
 // pagina maken voor virtual drug dealer
@@ -73,10 +74,13 @@ class App extends React.Component {
                         <Route exact path="/jonas">
                             <Jonas api={this.state.api} updateSelected={this.updateSelected}/>
                         </Route>
+                        <Route exact path="/ardennen">
+                            <Ardennen api={this.state.api} updateSelected={this.updateSelected}/>
+                        </Route>
                         <Route exact path="/minecraft">
                             <Minecraft api={this.state.api} updateSelected={this.updateSelected}/>
                         </Route>
-                        <Route path="/drugdealer">
+                        <Route exact path="/drugdealer">
                             <DrugDealer api={this.state.api} updateSelected={this.updateSelected}/>
                         </Route>
                         <Route path="/suggestions">
@@ -100,7 +104,7 @@ class App extends React.Component {
                             <Error404 updateSelected={this.updateSelected}/>
                         </Route>
                     </Switch>
-                    <div className="pin-bottom">Icon made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                    {/*TODO: <div className="pin-bottom">Icon made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>*/}
                 </Router>
             )
         }
