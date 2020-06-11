@@ -20,7 +20,7 @@ import Ardennen from "./Components/Content/Ardennen";
 // Amber
 // Ardennen
 // Constanten opslaan in file
-// Error 404 na bezoeken van ongeldige pagina in /suggestions
+// Error 404 na bezoeken van ongeldige pagina in /suggestions en mooier maken
 // Daarbij hoort ook het fixen van de nested routers
 // Categoriën toevoegen aan de suggesties
 // Cooldown zetten op suggesties toevoegen
