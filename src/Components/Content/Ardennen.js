@@ -17,6 +17,8 @@ class Ardennen extends React.Component {
                 11-13 september
                 <h4>Vervoer</h4>
                 Auto van Jentl, Axel en Arno (en Brent Kappa)
+                <h4>En waar verblijven we dan exact?</h4>
+                Dunno man, zoeken we nog wel.
                 <h4>Waarom is het niet meer 4-6 september?</h4>
                 Dan kunnen Axel en Jentl niet mee.
                 <h4>Wat doen we dan met Chloë haar concert?</h4>
