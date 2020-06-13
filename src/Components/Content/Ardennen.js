@@ -29,8 +29,11 @@ class Ardennen extends React.Component {
                 <p/>
                 <h1>Hier zijn de fucking links</h1>
                 <Link to="https://www.airbnb.be/rooms/34492424?wl_source=list&wl_id=775709320&role=wishlist_owner&check_in=2020-09-11&check_out=2020-09-13&adults=11&guests=11&source_impression_id=p3_1592073131_Zk8QmX1Rj8%2BDNoTk">Huis 1</Link>
+                <p/>
                 <Link to="https://www.airbnb.be/rooms/20699733?wl_source=list&wl_id=775709320&role=wishlist_owner&check_in=2020-09-11&check_out=2020-09-13&adults=11&guests=11&source_impression_id=p3_1592073133_sXb08SyA0C%2BK3%2FmE">Huis 2</Link>
+                <p/>
                 <Link to="https://nl.belvilla.be/vakantiehuizen/belgie/ondenval-13-personen-BE-4950-135?arrival_date=2020-09-11&nights=2&pax=11&uad=1&uls=1">Huis 3</Link>
+                <p/>
                 <Link to="https://nl.belvilla.be/vakantiehuizen/belgie/marche-en-famenne-13-personen-BE-1036-01?arrival_date=2020-09-09&nights=2&pax=11&uad=1&uls=1">Huis 4</Link>
 
             </div>
