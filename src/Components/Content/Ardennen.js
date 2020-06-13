@@ -35,7 +35,8 @@ class Ardennen extends React.Component {
                 <a href="https://nl.belvilla.be/vakantiehuizen/belgie/ondenval-13-personen-BE-4950-135?arrival_date=2020-09-11&nights=2&pax=11&uad=1&uls=1">Huis 3</a>
                 <p/>
                 <a href="https://nl.belvilla.be/vakantiehuizen/belgie/marche-en-famenne-13-personen-BE-1036-01?arrival_date=2020-09-09&nights=2&pax=11&uad=1&uls=1">Huis 4</a>
-
+                <p/>
+                <a href="https://www.strawpoll.me/20340909">Poll</a>
             </div>
         )
     }
