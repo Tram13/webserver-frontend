@@ -24,6 +24,7 @@ import Ardennen from "./Components/Content/Ardennen";
 // Daarbij hoort ook het fixen van de nested routers
 // Categoriën toevoegen aan de suggesties
 // Cooldown zetten op suggesties toevoegen
+// Idee voor /wout: Mira is een cult
 
 class App extends React.Component {
     constructor(props) {
