@@ -10,7 +10,7 @@ class Marijn extends React.Component {
 
     render() {
         return (
-            <h4>Redirecting to "Amerika in 't kort.</h4>
+            <h4 className="padded-left">Redirecting to "Amerika in 't kort.</h4>
         )
     }
 }
