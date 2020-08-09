@@ -14,6 +14,7 @@ import SuggestionForm from "./Components/Content/Suggestions/SuggestionForm";
 import Amber from "./Components/Content/Amber";
 import DrugDealer from "./Components/Content/DrugDealer/DrugDealer";
 import Ardennen from "./Components/Content/Ardennen";
+import Marijn from "./Components/Content/Marijn";
 
 //TODO's:
 // pagina maken voor virtual drug dealer
@@ -97,6 +98,9 @@ class App extends React.Component {
                         </Route>
                         <Route exact path="/amber">
                             <Amber api={this.state.api} updateSelected={this.updateSelected}/>
+                        </Route>
+                        <Route exact path="/marijn">
+                            <Marijn updateSelected={this.updateSelected}/>
                         </Route>
                         <Route exact path={"/"}>
                             <Home api={this.state.api} updateSelected={this.updateSelected}/>
