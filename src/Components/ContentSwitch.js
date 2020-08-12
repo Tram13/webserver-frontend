@@ -12,6 +12,7 @@ import Mira from "./Content/Mira";
 import Marijn from "./Content/Marijn";
 import Home from "./Content/Home";
 import Error404 from "./Error404";
+import Arnoud from "./Content/Arnoud";
 
 class ContentSwitch extends React.Component {
 
@@ -55,6 +56,9 @@ class ContentSwitch extends React.Component {
                 </Route>
                 <Route exact path="/amber">
                     <Amber api={this.props.api} updateSelected={this.updateSelected}/>
+                </Route>
+                <Route exact path="/arnoud">
+                    <Arnoud api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
                 <Route exact path="/mira">
                     <Mira api={this.props.api} updateSelected={this.updateSelected}/>

@@ -17,7 +17,8 @@ class NavBar extends React.Component {
             "ardennen",
             "drugdealer",
             "marijn",
-            "mira"
+            "mira",
+            "arnoud"
         ].sort();
     }
 
