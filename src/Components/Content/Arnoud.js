@@ -29,7 +29,7 @@ class Arnoud extends React.Component {
     }
 
     render() {
-        const tekening = <img className="materialboxed responsive-img" width="650" src={this.state.data["arnoud_kijk"]}
+        const arnoud_kijk = <img className="materialboxed responsive-img center" width="650" src={this.state.data["arnoud_kijk"]}
                               alt="Arnoud kijkt in de verte" data-caption="Arnoud is badass."/>;
         if (this.state.fetching) {
             return (
@@ -39,7 +39,7 @@ class Arnoud extends React.Component {
             return (
                 <div className="card-content">
                     <span className="card-title">Arnoud is een chad.</span>
-                    {tekening}
+                    {arnoud_kijk}
                 </div>
             )
         }
