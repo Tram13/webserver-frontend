@@ -1,5 +1,6 @@
 import React from "react";
 import DrugBuyButton from "./DrugBuyButton";
+import DrugSellButton from "./DrugSellButton";
 
 class DrugTableRow extends React.Component {
 
@@ -16,13 +17,7 @@ class DrugTableRow extends React.Component {
                 <DrugBuyButton drug={this.drug} onClickBuy={this.props.onClickBuy}/>
                 <td key={this.drug.name + "Owned"}>{this.drug.owned}</td>
                 <td key={this.drug.name + "BoughtAt"}>{this.drug.boughtAt !== undefined ? "$" + this.drug.boughtAt : ""}</td>
-                <td key={this.drug.name + "Sell"}>
-                    <a href={"#!"} id={this.drug.name} className="waves-effect waves-light btn"
-                       onClick={this.props.onClickSell}>
-                        <i id={this.drug.name} className="material-icons right">attach_money</i>
-                        Sell
-                    </a>
-                </td>
+                <DrugSellButton drug={this.drug} onClickSell={this.props.onClickSell}/>
             </tr>
         )
     }
