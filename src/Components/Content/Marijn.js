@@ -4,14 +4,18 @@ class Marijn extends React.Component {
 
     constructor(props) {
         super(props);
-        window.location.replace("https://www.youtube.com/channel/UCFEbMqIsgUiBVPCBm-uvL_Q");
         this.props.updateSelected("marijn");
+        this.link = "https://www.youtube.com/channel/UCFEbMqIsgUiBVPCBm-uvL_Q";
     }
 
     render() {
         return (
-            <h4 className="padded-left">Redirecting to "Amerika in 't kort.</h4>
-        )
+            <div className="padded-left">
+                <h4>Open Marijn's new YouTube channel: "Amerika in 't kort.</h4>
+                <a href={this.link} rel="noopener noreferrer" target="_blank"
+                   className="waves-effect waves-light btn-small red lighten-3"><i className="material-icons right">open_in_new</i>Go to YouTube</a>
+            </div>
+        );
     }
 }
 
