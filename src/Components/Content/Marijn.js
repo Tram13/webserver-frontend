@@ -10,10 +10,13 @@ class Marijn extends React.Component {
 
     render() {
         return (
-            <div className="padded-left">
-                <h4>Open Marijn's new YouTube channel: "Amerika in 't kort.</h4>
-                <a href={this.link} rel="noopener noreferrer" target="_blank"
-                   className="waves-effect waves-light btn-small red lighten-3"><i className="material-icons right">open_in_new</i>Go to YouTube</a>
+            <div className="card-content">
+                <span className="card-title">Marijn's YouTube Channel</span>
+                <p>Open Marijn's new YouTube channel: "Amerika in 't kort.</p>
+                <div className="card-action">
+                    <a href={this.link} rel="noopener noreferrer" target="_blank"><i
+                        className="material-icons right">open_in_new</i>Go to YouTube</a>
+                </div>
             </div>
         );
     }

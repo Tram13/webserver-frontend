@@ -30,14 +30,14 @@ class Mira extends React.Component {
 
     render() {
         const tekening = <img className="materialboxed responsive-img" width="650" src={this.state.data["tekening"]}
-                          alt="Tekening van Mira"/>;
+                          alt="Tekening van Mira" data-caption="Jonas heeft Mira getekend."/>;
         if (this.state.fetching) {
             return (
                 <LoadingAnimation/>
             )
         } else {
             return (
-                <div className={"padded-left"}>
+                <div className="padded-left">
                         <h3>Mira is een snitch</h3>
                         {tekening}
                 </div>

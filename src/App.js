@@ -16,6 +16,8 @@ import DrugDealer from "./Components/Content/DrugDealer/DrugDealer";
 import Ardennen from "./Components/Content/Ardennen";
 import Mira from "./Components/Content/Mira";
 import Marijn from "./Components/Content/Marijn";
+import AbstractCard from "./Components/AbstractCard";
+import ContentSwitch from "./Components/ContentSwitch";
 
 //TODO's:
 // pagina maken voor virtual drug dealer
@@ -32,7 +34,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {api: undefined, fetching: true};
-        this.url = "https://api.tram13.me"
+        this.url = "https://api.tram13.mee"
     }
 
     updateSelected = (selected) => {
@@ -70,49 +72,10 @@ class App extends React.Component {
             return (
                 <Router>
                     <NavBar selected={this.state.selected}/>
-                    <Switch>
-                        <Route exact path="/wout">
-                            <Wout api={this.state.api} updateSelected={this.updateSelected}/>
-                        </Route>
-                        <Route exact path="/jonas">
-                            <Jonas api={this.state.api} updateSelected={this.updateSelected}/>
-                        </Route>
-                        <Route exact path="/ardennen">
-                            <Ardennen api={this.state.api} updateSelected={this.updateSelected}/>
-                        </Route>
-                        <Route exact path="/minecraft">
-                            <Minecraft api={this.state.api} updateSelected={this.updateSelected}/>
-                        </Route>
-                        <Route exact path="/drugdealer">
-                            <DrugDealer api={this.state.api} updateSelected={this.updateSelected}/>
-                        </Route>
-                        <Route path="/suggestions">
-                            <Route exact path="/suggestions">
-                                <SuggestionsList api={this.state.api} updateSelected={this.updateSelected}/>
-                            </Route>
-                            <Route exact path="/suggestions/create">
-                                <SuggestionForm api={this.state.api} updateSelected={this.updateSelected}/>
-                            </Route>
-                            <Route exact path="/suggestions/:id/update">
-                                <SuggestionForm api={this.state.api} updateSelected={this.updateSelected}/>
-                            </Route>
-                        </Route>
-                        <Route exact path="/amber">
-                            <Amber api={this.state.api} updateSelected={this.updateSelected}/>
-                        </Route>
-                        <Route exact path="/mira">
-                            <Mira api={this.state.api} updateSelected={this.updateSelected}/>
-                        </Route>
-                        <Route exact path="/marijn">
-                            <Marijn updateSelected={this.updateSelected}/>
-                        </Route>
-                        <Route exact path={"/"}>
-                            <Home api={this.state.api} updateSelected={this.updateSelected}/>
-                        </Route>
-                        <Route>
-                            <Error404 updateSelected={this.updateSelected}/>
-                        </Route>
-                    </Switch>
+                    <AbstractCard content=
+                                      <ContentSwitch api={this.state.api} url={this.url}
+                                  updateSelected={this.updateSelected}/>
+                    />
                     {/*TODO: <div className="pin-bottom">Icon made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>*/}
                 </Router>
             )
