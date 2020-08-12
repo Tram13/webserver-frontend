@@ -38,8 +38,8 @@ class Home extends React.Component {
             )
         } else {
             return (
-                <div className={"padded-left"}>
-                    <h3>Geniet van de mooie content.</h3>
+                <div className="card-content">
+                    <span className="card-title">Geniet van de mooie content.</span>
                     {friendship}
                 </div>
             )

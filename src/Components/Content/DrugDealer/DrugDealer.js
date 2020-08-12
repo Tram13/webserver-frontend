@@ -61,12 +61,13 @@ class DrugDealer extends React.Component {
         return (
             <div>
                 <DrugTable drugs={this.marketplace.drugs} onClickSell={this.onClickSell} onClickBuy={this.onClickBuy}/>
-
-                <button className="waves-effect waves-light btn" onClick={this.nextDay}>
-                    {this.daysleft !== 0 ? "Next day" : "Final score"}
-                </button>
-                <button className="btn-flat disabled">Current cash: ${this.cash}</button>
-                <button className="btn-flat disabled">Days left: {this.daysleft}</button>
+                <div className="left-align">
+                    <button className="waves-effect waves-light btn" onClick={this.nextDay}>
+                        {this.daysleft !== 0 ? "Next day" : "Final score"}
+                    </button>
+                    <button className="btn-flat disabled">Current cash: ${this.cash}</button>
+                    <button className="btn-flat disabled">Days left: {this.daysleft}</button>
+                </div>
             </div>
         )
     }

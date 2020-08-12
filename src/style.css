@@ -29,3 +29,9 @@ table.highlight>tbody>tr:hover {
 body {
     background-color: #ffebee;
 }
+h6.underline {
+
+}
+h6.semi-bold {
+    font-weight: 550;
+}

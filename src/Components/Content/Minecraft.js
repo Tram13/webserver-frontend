@@ -34,14 +34,14 @@ class Minecraft extends React.Component {
         } else {
             let status;
             if (this.state.data['online']) {
-                status = <h4>Huidige status: Online<i className="material-icons padded-left">check</i></h4>
+                status = <h6>Huidige status: Online<i className="material-icons padded-left">check</i></h6>
             } else {
-                status = <h4>Huidige status: Offline<i className="material-icons padded-left">error</i></h4>
+                status = <h6>Huidige status: Offline<i className="material-icons padded-left">error</i></h6>
             }
             return (
-                <div className="padded-left">
-                    <h3>Minecraft toegangsportaal</h3>
-                    <h5>Welkom op het wereldwijde web, 90s-style.</h5>
+                <div className="card-content">
+                    <span className="card-title">Minecraft toegangsportaal</span>
+                    <h6>Welkom op het wereldwijde web, 90s-style.</h6>
                     <p>
                         Koop hier je maandticket voor de SkyFactory-server! Huidige maand: mei
                     </p>
@@ -55,9 +55,9 @@ class Minecraft extends React.Component {
                         Minimumdonatie is 9.95EUR. Vermeld de gebruikersnaam in het bericht.
                     </p>
                     <p/>
-                    <h3>
+                    <h5>
                         <a href="https://www.paypal.me/vermotearno">PayPal-Link</a>
-                    </h3>
+                    </h5>
                     {status}
                 </div>
             )

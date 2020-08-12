@@ -41,20 +41,20 @@ class Jonas extends React.Component {
             )
         } else {
             return (
-                <div className={"padded-left"}>
-                    <h3>Jonas is een dikke sloef</h3>
+                <div className="card-content">
+                    <span className="card-title">Jonas is een dikke sloef</span>
                     <div>
                         <table>
                             <tbody>
-                            <tr className={"no-border"}>
-                                <td><h5>Jonas komt niet naar HashCode omdat hij stout was.</h5></td>
-                                <td><h5>We waren 5de* btw, take that Jonas</h5></td>
+                            <tr className="no-border">
+                                <td className="center">Jonas komt niet naar HashCode omdat hij stout was.</td>
+                                <td className="center">We waren 5de* btw, take that Jonas</td>
                             </tr>
                             <tr className={"no-border"}>
                                 <td>{kop1}</td>
                                 <td>{kop2}</td>
                             </tr>
-                            <p>*technisch gezien correct</p>
+                            <p className="left-align">*technisch gezien correct</p>
                             </tbody>
                         </table>
                     </div>

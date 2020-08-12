@@ -34,8 +34,8 @@ class Amber extends React.Component {
 
     render() {
         return (
-            <div className="padded-left">
-                <h3>Hoelang moet Amber nog werken?</h3>
+            <div className="card-content">
+                <span className="card-title">Hoelang moet Amber nog werken?</span>
                 <p>{this.state.duration}</p>
             </div>
         )

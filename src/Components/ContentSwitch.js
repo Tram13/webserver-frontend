@@ -17,7 +17,6 @@ class ContentSwitch extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {api: undefined};
         this.updateSelected = this.props.updateSelected;
     }
 
@@ -26,45 +25,45 @@ class ContentSwitch extends React.Component {
         return (
             <Switch>
                 <Route exact path="/wout">
-                    <Wout api={this.state.api} updateSelected={this.updateSelected}/>
+                    <Wout api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
                 <Route exact path="/jonas">
-                    <Jonas api={this.state.api} updateSelected={this.updateSelected}/>
+                    <Jonas api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
                 <Route exact path="/ardennen">
-                    <Ardennen api={this.state.api} updateSelected={this.updateSelected}/>
+                    <Ardennen api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
                 <Route exact path="/minecraft">
-                    <Minecraft api={this.state.api} updateSelected={this.updateSelected}/>
+                    <Minecraft api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
                 <Route exact path="/drugdealer">
-                    <DrugDealer api={this.state.api} updateSelected={this.updateSelected}/>
+                    <DrugDealer api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
                 <Route path="/suggestions">
                     <Route exact path="/suggestions">
-                        <SuggestionsList api={this.state.api}
+                        <SuggestionsList api={this.props.api}
                                          updateSelected={this.updateSelected}/>
                     </Route>
                     <Route exact path="/suggestions/create">
-                        <SuggestionForm api={this.state.api}
+                        <SuggestionForm api={this.props.api}
                                         updateSelected={this.updateSelected}/>
                     </Route>
                     <Route exact path="/suggestions/:id/update">
-                        <SuggestionForm api={this.state.api}
+                        <SuggestionForm api={this.props.api}
                                         updateSelected={this.updateSelected}/>
                     </Route>
                 </Route>
                 <Route exact path="/amber">
-                    <Amber api={this.state.api} updateSelected={this.updateSelected}/>
+                    <Amber api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
                 <Route exact path="/mira">
-                    <Mira api={this.state.api} updateSelected={this.updateSelected}/>
+                    <Mira api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
                 <Route exact path="/marijn">
                     <Marijn updateSelected={this.updateSelected}/>
                 </Route>
                 <Route exact path={"/"}>
-                    <Home api={this.state.api} updateSelected={this.updateSelected}/>
+                    <Home api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
                 <Route>
                     <Error404 updateSelected={this.updateSelected}/>

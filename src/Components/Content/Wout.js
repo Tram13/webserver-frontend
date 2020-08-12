@@ -44,10 +44,10 @@ class Wout extends React.Component {
             )
         } else {
             return (
-                <div className={"padded-left"}>
-                    <h3>Wout pest de assistent van WebDev</h3>
+                <div className="card-content">
+                    <span className="card-title">Wout pest de assistent van WebDev</span>
                     <div>
-                        <h5>when you sudo reboot and it doesn't work anymore</h5>
+                        <h6>when you sudo reboot and it doesn't work anymore</h6>
                         <table>
                             <tbody>
                             <tr className={"no-border"}>
@@ -58,7 +58,7 @@ class Wout extends React.Component {
                         </table>
                     </div>
                     <div>
-                        <h5>when you do it again</h5>
+                        <h6>when you do it again</h6>
                         {kop3}
                     </div>
                 </div>
