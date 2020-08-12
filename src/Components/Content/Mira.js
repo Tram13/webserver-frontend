@@ -29,8 +29,10 @@ class Mira extends React.Component {
     }
 
     render() {
-        const tekening = <img className="materialboxed responsive-img" width="650" src={this.state.data["tekening"]}
+        const mira_1 = <img className="materialboxed responsive-img" width="650" src={this.state.data["mira_tekening"]}
                               alt="Tekening van Mira" data-caption="Jonas heeft Mira getekend."/>;
+        const mira_2 = <img className="materialboxed responsive-img" width="650" src={this.state.data["mira_choke"]}
+                            alt="Mira wordt gechoked" data-caption="Choke me daddy @Wout"/>;
         if (this.state.fetching) {
             return (
                 <LoadingAnimation/>
@@ -39,7 +41,7 @@ class Mira extends React.Component {
             return (
                 <div className="card-content">
                     <span className="card-title">Mira is een snitch</span>
-                    {tekening}
+                    {mira_1}
                 </div>
             )
         }
