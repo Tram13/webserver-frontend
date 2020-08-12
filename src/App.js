@@ -5,7 +5,9 @@ import NavBar from "./Components/NavBar/NavBar";
 import LoadingAnimation from "./Components/LoadingAnimation";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import AbstractCard from "./Components/AbstractCard";
-import ContentSwitch from "./Components/ContentSwitch";
+import CardSwitch from "./Components/Switches/CardSwitch";
+import TableSwitch from "./Components/Switches/TableSwitch";
+import MainSwitch from "./Components/Switches/MainSwitch";
 
 //TODO's:
 // pagina maken voor virtual drug dealer
@@ -61,10 +63,7 @@ class App extends React.Component {
             return (
                 <Router>
                     <NavBar selected={this.state.selected}/>
-                    <AbstractCard content={
-                        <ContentSwitch api={this.state.api} url={this.url} updateSelected={this.updateSelected}/>
-                    }
-                    />
+                    <MainSwitch api={this.state.api} url={this.url} updateSelected={this.updateSelected}/>
                     {/*TODO: <div className="pin-bottom">Icon made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>*/}
                 </Router>
             )

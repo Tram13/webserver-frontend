@@ -41,7 +41,7 @@ class SuggestionsList extends React.Component {
             return <LoadingAnimation/>
         } else {
             return (
-                <div>
+                <div className="white">
                     <SuggestionsTable api={this.props.api} data={this.state.data} getSuggestions={this.getSuggestions}/>
                     {floatingAddButton}
                 </div>

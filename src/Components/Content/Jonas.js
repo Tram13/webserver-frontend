@@ -54,7 +54,11 @@ class Jonas extends React.Component {
                                 <td>{kop1}</td>
                                 <td>{kop2}</td>
                             </tr>
-                            <p className="left-align">*technisch gezien correct</p>
+                            <tr className="no-border">
+                                <td>
+                                    *technisch gezien correct
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>

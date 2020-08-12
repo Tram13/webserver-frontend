@@ -59,7 +59,7 @@ class DrugDealer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="white">
                 <DrugTable drugs={this.marketplace.drugs} onClickSell={this.onClickSell} onClickBuy={this.onClickBuy}/>
                 <div className="left-align">
                     <button className="waves-effect waves-light btn-small" onClick={this.nextDay}>
