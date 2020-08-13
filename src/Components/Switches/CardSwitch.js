@@ -21,53 +21,37 @@ class CardSwitch extends React.Component {
 
     render() {
         return (
-            <Switch>
-                <Route exact path="/wout">
-                    <AbstractCard content={
+            <AbstractCard content={
+                <Switch>
+                    <Route exact path="/wout">
                         <Wout api={this.props.api} updateSelected={this.updateSelected}/>
-                    }/>
-                </Route>
-                <Route exact path="/jonas">
-                    <AbstractCard content={
+                    </Route>
+                    <Route exact path="/jonas">
                         <Jonas api={this.props.api} updateSelected={this.updateSelected}/>
-                    }/>
-                </Route>
-                <Route exact path="/ardennen">
-                    <AbstractCard content={
+                    </Route>
+                    <Route exact path="/ardennen">
                         <Ardennen api={this.props.api} updateSelected={this.updateSelected}/>
-                    }/>
-                </Route>
-                <Route exact path="/minecraft">
-                    <AbstractCard content={
+                    </Route>
+                    <Route exact path="/minecraft">
                         <Minecraft api={this.props.api} updateSelected={this.updateSelected}/>
-                    }/>
-                </Route>
-                <Route exact path="/amber">
-                    <AbstractCard content={
+                    </Route>
+                    <Route exact path="/amber">
                         <Amber api={this.props.api} updateSelected={this.updateSelected}/>
-                    }/>
-                </Route>
-                <Route exact path="/arnoud">
-                    <AbstractCard content={
+                    </Route>
+                    <Route exact path="/arnoud">
                         <Arnoud api={this.props.api} updateSelected={this.updateSelected}/>
-                    }/>
-                </Route>
-                <Route exact path="/mira">
-                    <AbstractCard content={
+                    </Route>
+                    <Route exact path="/mira">
                         <Mira api={this.props.api} updateSelected={this.updateSelected}/>
-                    }/>
-                </Route>
-                <Route exact path="/marijn">
-                    <AbstractCard content={
+                    </Route>
+                    <Route exact path="/marijn">
                         <Marijn updateSelected={this.updateSelected}/>
-                    }/>
-                </Route>
-                <Route exact path={"/"}>
-                    <AbstractCard content={
+                    </Route>
+                    <Route exact path={"/"}>
                         <Home api={this.props.api} updateSelected={this.updateSelected}/>
-                    }/>
-                </Route>
-            </Switch>
+                    </Route>
+                </Switch>
+            }/>
         )
     }
 }
