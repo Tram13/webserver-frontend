@@ -12,10 +12,8 @@ class Amber extends React.Component {
     }
 
     componentDidMount() {
-        this.intervalID = window.setInterval(() => {
-            this.setState({duration: this.durationFormatter()})
-        }, 25);
-        //this.setState({duration: "Amber heeft genoeg cold hard cash verdiend."})
+        //this.intervalID = window.setInterval(() => {this.setState({duration: this.durationFormatter()})}, 25);
+        this.setState({duration: "Amber heeft genoeg cold hard cash verdiend."})
     }
 
     componentWillUnmount() {

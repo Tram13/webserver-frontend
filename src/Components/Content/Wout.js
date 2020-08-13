@@ -3,6 +3,7 @@ import M from "materialize-css"
 import '../../style.css'
 import LoadingAnimation from "../LoadingAnimation";
 import AbstractCard from "../AbstractCard";
+import {Link} from "react-router-dom";
 
 class Wout extends React.Component {
 
@@ -63,6 +64,8 @@ class Wout extends React.Component {
                             <h6>when you do it again</h6>
                             {kop3}
                         </div>
+                        <br/>
+                        <Link className="left" to="/mira">Mira is een cult.</Link>
                     </div>
                 </AbstractCard>
             )

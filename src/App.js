@@ -4,18 +4,15 @@ import 'materialize-css/dist/css/materialize.min.css'
 import NavBar from "./Components/NavBar/NavBar";
 import LoadingAnimation from "./Components/LoadingAnimation";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import MainSwitch from "./Components/MainSwitch";
+import MainSwitch from "./Components/Routes/MainSwitch";
 
 //TODO's:
 // pagina maken voor virtual drug dealer
-// Amber
 // Ardennen
 // Constanten opslaan in file
 // Error 404 na bezoeken van ongeldige pagina in /suggestions en mooier maken
-// Daarbij hoort ook het fixen van de nested routers
 // Categoriën toevoegen aan de suggesties
 // Cooldown zetten op suggesties toevoegen
-// Idee voor /wout: Mira is een cult
 
 class App extends React.Component {
     constructor(props) {

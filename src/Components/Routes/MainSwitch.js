@@ -1,17 +1,17 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
-import Wout from "./Content/Wout";
-import Jonas from "./Content/Jonas";
-import Ardennen from "./Content/Ardennen";
-import Minecraft from "./Content/Minecraft";
-import Amber from "./Content/Amber";
-import Mira from "./Content/Mira";
-import Marijn from "./Content/Marijn";
-import Home from "./Content/Home";
-import DrugDealer from "./Content/DrugDealer/DrugDealer";
-import SuggestionsList from "./Content/Suggestions/SuggestionsList";
-import SuggestionForm from "./Content/Suggestions/SuggestionForm";
-import Error404 from "./Error404";
+import Wout from "../Content/Wout";
+import Jonas from "../Content/Jonas";
+import Ardennen from "../Content/Ardennen";
+import Minecraft from "../Content/Minecraft";
+import Amber from "../Content/Amber";
+import Mira from "../Content/Mira";
+import Marijn from "../Content/Marijn";
+import Home from "../Content/Home";
+import DrugDealer from "../Content/DrugDealer/DrugDealer";
+import SuggestionsList from "../Content/Suggestions/SuggestionsList";
+import SuggestionForm from "../Content/Suggestions/SuggestionForm";
+import Error404 from "../Error404";
 
 class MainSwitch extends React.Component {
 
@@ -20,12 +20,9 @@ class MainSwitch extends React.Component {
         this.updateSelected = this.props.updateSelected;
     }
 
-
     render() {
         return (
             <Switch>
-                {/* ALL TABLEVIEWS */}
-
                 <Route exact path="/drugdealer">
                     <DrugDealer api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
@@ -43,9 +40,6 @@ class MainSwitch extends React.Component {
                                         updateSelected={this.updateSelected}/>
                     </Route>
                 </Route>
-
-                {/* ALL CARDVIEWS */}
-
                 <Route exact path="/wout">
                     <Wout api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
