@@ -2,6 +2,7 @@ import React from "react";
 import M from "materialize-css";
 import LoadingAnimation from "../LoadingAnimation";
 import {Link} from "react-router-dom";
+import AbstractCard from "../AbstractCard";
 
 class Mira extends React.Component {
 
@@ -40,23 +41,25 @@ class Mira extends React.Component {
             )
         } else {
             return (
-                <div className="card-content">
-                    <span className="card-title">Mira is een snitch</span>
-                    <div>
-                        <table>
-                            <tbody>
-                            <tr className="no-border">
-                                <td className="center">100dagen</td>
-                                <td className="center"><Link to="/wout">@Wout</Link></td>
-                            </tr>
-                            <tr className={"no-border"}>
-                                <td>{mira_1}</td>
-                                <td>{mira_2}</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                <AbstractCard>
+                    <div className="card-content">
+                        <span className="card-title">Mira is een snitch</span>
+                        <div>
+                            <table>
+                                <tbody>
+                                <tr className="no-border">
+                                    <td className="center">100dagen</td>
+                                    <td className="center"><Link to="/wout">@Wout</Link></td>
+                                </tr>
+                                <tr className={"no-border"}>
+                                    <td>{mira_1}</td>
+                                    <td>{mira_2}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
+                </AbstractCard>
             )
         }
     }

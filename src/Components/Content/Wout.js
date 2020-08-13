@@ -2,6 +2,7 @@ import React from "react";
 import M from "materialize-css"
 import '../../style.css'
 import LoadingAnimation from "../LoadingAnimation";
+import AbstractCard from "../AbstractCard";
 
 class Wout extends React.Component {
 
@@ -44,24 +45,26 @@ class Wout extends React.Component {
             )
         } else {
             return (
-                <div className="card-content">
-                    <span className="card-title">Wout pest de assistent van WebDev</span>
-                    <div>
-                        <h6>when you sudo reboot and it doesn't work anymore</h6>
-                        <table>
-                            <tbody>
-                            <tr className={"no-border"}>
-                                <td>{kop1}</td>
-                                <td>{kop2}</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                <AbstractCard>
+                    <div className="card-content">
+                        <span className="card-title">Wout pest de assistent van WebDev</span>
+                        <div>
+                            <h6>when you sudo reboot and it doesn't work anymore</h6>
+                            <table>
+                                <tbody>
+                                <tr className={"no-border"}>
+                                    <td>{kop1}</td>
+                                    <td>{kop2}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h6>when you do it again</h6>
+                            {kop3}
+                        </div>
                     </div>
-                    <div>
-                        <h6>when you do it again</h6>
-                        {kop3}
-                    </div>
-                </div>
+                </AbstractCard>
             )
         }
     }

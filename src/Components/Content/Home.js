@@ -2,6 +2,7 @@ import React from "react";
 import M from "materialize-css"
 import '../../style.css'
 import LoadingAnimation from "../LoadingAnimation";
+import AbstractCard from "../AbstractCard";
 
 class Home extends React.Component {
 
@@ -38,10 +39,12 @@ class Home extends React.Component {
             )
         } else {
             return (
-                <div className="card-content">
-                    <span className="card-title">Geniet van de mooie content.</span>
-                    {friendship}
-                </div>
+                <AbstractCard>
+                    <div className="card-content">
+                        <span className="card-title">Geniet van de mooie content.</span>
+                        {friendship}
+                    </div>
+                </AbstractCard>
             )
         }
     }

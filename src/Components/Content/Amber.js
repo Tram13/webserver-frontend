@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import AbstractCard from "../AbstractCard";
 
 class Amber extends React.Component {
 
@@ -11,8 +12,10 @@ class Amber extends React.Component {
     }
 
     componentDidMount() {
-        // this.intervalID = window.setInterval(() => {this.setState({duration: this.durationFormatter()})}, 25);
-        this.setState({duration: "Amber heeft genoeg cold hard cash verdiend."})
+        this.intervalID = window.setInterval(() => {
+            this.setState({duration: this.durationFormatter()})
+        }, 25);
+        //this.setState({duration: "Amber heeft genoeg cold hard cash verdiend."})
     }
 
     componentWillUnmount() {
@@ -23,7 +26,7 @@ class Amber extends React.Component {
 
     durationFormatter = () => {
         const duration = this.getDuration();
-        return(`Nog ${duration.days()} dagen, ${duration.hours()} uren, ${duration.minutes()} minuten en ${duration.seconds()}.${duration.milliseconds()} seconden.`)
+        return (`Nog ${duration.days()} dagen, ${duration.hours()} uren, ${duration.minutes()} minuten en ${duration.seconds()}.${duration.milliseconds()} seconden.`)
     }
 
     getDuration = () => {
@@ -34,10 +37,12 @@ class Amber extends React.Component {
 
     render() {
         return (
-            <div className="card-content">
-                <span className="card-title">Hoelang moet Amber nog werken?</span>
-                <p>{this.state.duration}</p>
-            </div>
+            <AbstractCard>
+                <div className="card-content">
+                    <span className="card-title">Hoelang moet Amber nog werken?</span>
+                    <p>{this.state.duration}</p>
+                </div>
+            </AbstractCard>
         )
     }
 }

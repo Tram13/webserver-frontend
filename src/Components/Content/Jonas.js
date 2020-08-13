@@ -2,6 +2,7 @@ import React from "react";
 import M from "materialize-css"
 import '../../style.css'
 import LoadingAnimation from "../LoadingAnimation";
+import AbstractCard from "../AbstractCard";
 
 class Jonas extends React.Component {
 
@@ -41,28 +42,30 @@ class Jonas extends React.Component {
             )
         } else {
             return (
-                <div className="card-content">
-                    <span className="card-title">Jonas is een dikke sloef</span>
-                    <div>
-                        <table>
-                            <tbody>
-                            <tr className="no-border">
-                                <td className="center">Jonas komt niet naar HashCode omdat hij stout was.</td>
-                                <td className="center">We waren 5de* btw, take that Jonas</td>
-                            </tr>
-                            <tr className={"no-border"}>
-                                <td>{kop1}</td>
-                                <td>{kop2}</td>
-                            </tr>
-                            <tr className="no-border">
-                                <td>
-                                    *technisch gezien correct
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                <AbstractCard>
+                    <div className="card-content">
+                        <span className="card-title">Jonas is een dikke sloef</span>
+                        <div>
+                            <table>
+                                <tbody>
+                                <tr className="no-border">
+                                    <td className="center">Jonas komt niet naar HashCode omdat hij stout was.</td>
+                                    <td className="center">We waren 5de* btw, take that Jonas</td>
+                                </tr>
+                                <tr className={"no-border"}>
+                                    <td>{kop1}</td>
+                                    <td>{kop2}</td>
+                                </tr>
+                                <tr className="no-border">
+                                    <td>
+                                        *technisch gezien correct
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
+                </AbstractCard>
             )
         }
     }

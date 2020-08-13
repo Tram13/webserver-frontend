@@ -4,10 +4,7 @@ import 'materialize-css/dist/css/materialize.min.css'
 import NavBar from "./Components/NavBar/NavBar";
 import LoadingAnimation from "./Components/LoadingAnimation";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import AbstractCard from "./Components/AbstractCard";
-import CardSwitch from "./Components/Switches/CardSwitch";
-import TableSwitch from "./Components/Switches/TableSwitch";
-import MainSwitch from "./Components/Switches/MainSwitch";
+import MainSwitch from "./Components/MainSwitch";
 
 //TODO's:
 // pagina maken voor virtual drug dealer

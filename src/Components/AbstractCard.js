@@ -4,7 +4,6 @@ class AbstractCard extends React.Component {
 
     constructor(props) {
         super(props);
-        this.content = this.props.content;
     }
 
     render() {
@@ -13,7 +12,7 @@ class AbstractCard extends React.Component {
                 <div className="row container center">
                     <div className="col s12 m12">
                         <div className="card">
-                            {this.content}
+                            {this.props.children}
                         </div>
                     </div>
                 </div>
