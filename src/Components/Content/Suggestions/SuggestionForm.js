@@ -4,6 +4,7 @@ import Suggestion from "../../../DTO/Suggestion"
 import postSuggestion from "../../../APIHelper/Suggestion/PostSuggestion";
 import patchSuggestion from "../../../APIHelper/Suggestion/PatchSuggestion";
 import {Link, matchPath, Redirect} from "react-router-dom";
+import AbstractCard from "../../AbstractCard";
 
 class SuggestionForm extends React.Component {
 
@@ -92,33 +93,35 @@ class SuggestionForm extends React.Component {
         if (this.state.redirect) {
             return <Redirect to={"/suggestions"}/>;
         } else return (
-            <div className="row padded-left">
-                <h3>Please enter your name and suggestion below.</h3>
-                <form className="col s12" onSubmit={this.submit}>
-                    <div className="row">
-                        <div className="input-field col s12">
-                            <i className="material-icons prefix">account_circle</i>
-                            {/*TODO: momenteel niet veilig. Check npm audit.   autocomplete*/}
-                            <input name="name" id="name" type="text" className="validate"
-                                   onChange={this.updateState} value={this.state.name}/>
-                            <label htmlFor="name">Name</label>
+            <AbstractCard>
+                <div className="row card-content">
+                    <span className="card-title">Please enter your name and suggestion below.</span>
+                    <form className="col s12" onSubmit={this.submit}>
+                        <div className="row">
+                            <div className="input-field col s12">
+                                <i className="material-icons prefix">account_circle</i>
+                                {/*TODO: momenteel niet veilig. Check npm audit.   autocomplete*/}
+                                <input name="name" id="name" type="text" className="validate"
+                                       onChange={this.updateState} value={this.state.name}/>
+                                <label htmlFor="name">Name</label>
+                            </div>
                         </div>
-                    </div>
-                    <div className="row">
-                        <div className="input-field col s12">
-                            <i className="material-icons prefix">textsms</i>
-                            <textarea name="message" id="textarea1" className="materialize-textarea"
-                                      onChange={this.updateState} value={this.state.message}/>
-                            <label htmlFor="textarea1">Your suggestion: </label>
+                        <div className="row">
+                            <div className="input-field col s12">
+                                <i className="material-icons prefix">textsms</i>
+                                <textarea name="message" id="textarea1" className="materialize-textarea"
+                                          onChange={this.updateState} value={this.state.message}/>
+                                <label htmlFor="textarea1">Your suggestion: </label>
+                            </div>
                         </div>
-                    </div>
-                    <button className="btn waves-effect waves-light" type="submit">{this.id ? "Update" : "Create"}
-                        <i className="material-icons right">send</i>
-                    </button>
-                    {/*TODO: de cancel knop moet "back" gaan, niet naar het overzicht*/}
-                    <Link to={"/suggestions"} className="waves-effect waves-teal btn-flat">Cancel</Link>
-                </form>
-            </div>
+                        <button className="btn waves-effect waves-light" type="submit">{this.id ? "Update" : "Create"}
+                            <i className="material-icons right">send</i>
+                        </button>
+                        {/*TODO: de cancel knop moet "back" gaan, niet naar het overzicht*/}
+                        <Link to={"/suggestions"} className="waves-effect waves-teal btn-flat">Cancel</Link>
+                    </form>
+                </div>
+            </AbstractCard>
         )
     }
 }
