@@ -38,9 +38,9 @@ class CardSwitch extends React.Component {
                     <Route exact path="/amber">
                         <Amber api={this.props.api} updateSelected={this.updateSelected}/>
                     </Route>
-                    <Route exact path="/arnoud">
+                    {/*<Route exact path="/arnoud">
                         <Arnoud api={this.props.api} updateSelected={this.updateSelected}/>
-                    </Route>
+                    </Route>*/}
                     <Route exact path="/mira">
                         <Mira api={this.props.api} updateSelected={this.updateSelected}/>
                     </Route>
