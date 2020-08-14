@@ -1,12 +1,18 @@
 import React from "react";
 import moment from "moment";
 import AbstractCard from "../AbstractCard";
+import LoadingAnimation from "../LoadingAnimation";
+import M from "materialize-css";
 
 class Amber extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {duration: undefined};
+        this.state = {
+            duration: undefined,
+            data: {},
+            fetching: true
+        };
         this.props.updateSelected("amber");
         this.intervalID = undefined;
     }
@@ -14,6 +20,22 @@ class Amber extends React.Component {
     componentDidMount() {
         //this.intervalID = window.setInterval(() => {this.setState({duration: this.durationFormatter()})}, 25);
         this.setState({duration: "Amber heeft genoeg cold hard cash verdiend."})
+
+        const url = this.props.api["amber"];
+        fetch(url).then(
+            response => (response.json()
+                    .then((r) => {
+                            this.setState(
+                                {
+                                    data: r,
+                                    fetching: false
+                                }
+                            );
+                            M.AutoInit()
+                        }
+                    )
+            )
+        )
     }
 
     componentWillUnmount() {
@@ -34,14 +56,26 @@ class Amber extends React.Component {
     }
 
     render() {
-        return (
-            <AbstractCard>
-                <div className="card-content">
-                    <span className="card-title">Hoelang moet Amber nog werken?</span>
-                    <p>{this.state.duration}</p>
-                </div>
-            </AbstractCard>
-        )
+        const amber_brugge = <img className="materialboxed responsive-img" width="650"
+                                  src={this.state.data["amber_brugge"]}
+                                  alt="Amber in Brugge"
+                                  data-caption="Amber in Brugge"/>;
+
+        if (this.state.fetching) {
+            return (
+                <LoadingAnimation/>
+            )
+        } else {
+            return (
+                <AbstractCard>
+                    <div className="card-content">
+                        <span className="card-title">Hoelang moet Amber nog werken?</span>
+                        <p>{this.state.duration}</p>
+                        {amber_brugge}
+                    </div>
+                </AbstractCard>
+            )
+        }
     }
 }
 
