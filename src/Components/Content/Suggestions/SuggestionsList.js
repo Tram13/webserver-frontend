@@ -29,6 +29,7 @@ class SuggestionsList extends React.Component {
     };
 
     componentDidMount() {
+        this.getSuggestions(); // Needs to be done manually the first time
         this.intervalID = window.setInterval(() => {this.getSuggestions()}, this.timeout);
     };
 
