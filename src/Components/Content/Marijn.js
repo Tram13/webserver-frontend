@@ -1,6 +1,6 @@
 import React from "react";
-import AbstractCard from "../AbstractCard";
-import CardTitle from "../CardTitle";
+import AbstractCard from "../AbstractCard/AbstractCard";
+import CardTitle from "../AbstractCard/CardTitle";
 
 class Marijn extends React.Component {
 

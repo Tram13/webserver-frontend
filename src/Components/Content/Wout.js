@@ -2,9 +2,9 @@ import React from "react";
 import M from "materialize-css"
 import '../../style.css'
 import LoadingAnimation from "../LoadingAnimation";
-import AbstractCard from "../AbstractCard";
+import AbstractCard from "../AbstractCard/AbstractCard";
 import {Link} from "react-router-dom";
-import CardTitle from "../CardTitle";
+import CardTitle from "../AbstractCard/CardTitle";
 
 class Wout extends React.Component {
 

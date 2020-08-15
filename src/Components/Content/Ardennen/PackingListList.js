@@ -1,11 +1,7 @@
 import React from "react";
-import AbstractCard from "../../AbstractCard";
+import AbstractCard from "../../AbstractCard/AbstractCard";
 
 class PackingListList extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         console.log('hi');
         return (

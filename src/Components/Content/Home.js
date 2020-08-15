@@ -2,8 +2,8 @@ import React from "react";
 import M from "materialize-css"
 import '../../style.css'
 import LoadingAnimation from "../LoadingAnimation";
-import AbstractCard from "../AbstractCard";
-import CardTitle from "../CardTitle";
+import AbstractCard from "../AbstractCard/AbstractCard";
+import CardTitle from "../AbstractCard/CardTitle";
 
 class Home extends React.Component {
 

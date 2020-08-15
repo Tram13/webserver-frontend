@@ -1,9 +1,9 @@
 import React from "react";
 import moment from "moment";
-import AbstractCard from "../AbstractCard";
+import AbstractCard from "../AbstractCard/AbstractCard";
 import LoadingAnimation from "../LoadingAnimation";
 import M from "materialize-css";
-import CardTitle from "../CardTitle";
+import CardTitle from "../AbstractCard/CardTitle";
 
 class Amber extends React.Component {
 

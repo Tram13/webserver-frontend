@@ -4,8 +4,8 @@ import Suggestion from "../../../DTO/Suggestion"
 import postSuggestion from "../../../APIHelper/Suggestion/PostSuggestion";
 import patchSuggestion from "../../../APIHelper/Suggestion/PatchSuggestion";
 import {Link, matchPath, Redirect} from "react-router-dom";
-import AbstractCard from "../../AbstractCard";
-import CardTitle from "../../CardTitle";
+import AbstractCard from "../../AbstractCard/AbstractCard";
+import CardTitle from "../../AbstractCard/CardTitle";
 
 class SuggestionForm extends React.Component {
 

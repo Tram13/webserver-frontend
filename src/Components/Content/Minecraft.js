@@ -1,7 +1,7 @@
 import React from "react";
 import LoadingAnimation from "../LoadingAnimation";
-import AbstractCard from "../AbstractCard";
-import CardTitle from "../CardTitle";
+import AbstractCard from "../AbstractCard/AbstractCard";
+import CardTitle from "../AbstractCard/CardTitle";
 
 class Minecraft extends React.Component {
 

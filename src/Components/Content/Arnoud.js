@@ -1,8 +1,8 @@
 import React from "react";
 import M from "materialize-css";
 import LoadingAnimation from "../LoadingAnimation";
-import AbstractCard from "../AbstractCard";
-import CardTitle from "../CardTitle";
+import AbstractCard from "../AbstractCard/AbstractCard";
+import CardTitle from "../AbstractCard/CardTitle";
 
 class Arnoud extends React.Component {
 
@@ -39,12 +39,12 @@ class Arnoud extends React.Component {
             )
         } else {
             return (
-                <AbstractCard content={
+                <AbstractCard>
                     <div className="card-content">
                         <CardTitle>Arnoud is een chad.</CardTitle>
                         {arnoud_kijk}
                     </div>
-                }/>
+                </AbstractCard>
             )
         }
     }
