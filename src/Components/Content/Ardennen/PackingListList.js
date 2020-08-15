@@ -13,4 +13,3 @@ class PackingListList extends React.Component {
 }
 
 export default PackingListList;
-// comment here
