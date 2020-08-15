@@ -5,6 +5,7 @@ import postSuggestion from "../../../APIHelper/Suggestion/PostSuggestion";
 import patchSuggestion from "../../../APIHelper/Suggestion/PatchSuggestion";
 import {Link, matchPath, Redirect} from "react-router-dom";
 import AbstractCard from "../../AbstractCard";
+import CardTitle from "../../CardTitle";
 
 class SuggestionForm extends React.Component {
 
@@ -25,13 +26,13 @@ class SuggestionForm extends React.Component {
         //  Doe dit dan ook x)
         const match = matchPath(window.location.pathname, {
             path: "/suggestions/:id/update"
-        })
+        });
         if (match) {
             return match.params.id;
         } else {
             return undefined;
         }
-    }
+    };
 
     updateState = (event) => {
         this.setState({
@@ -76,7 +77,7 @@ class SuggestionForm extends React.Component {
             fetch(this.props.api["suggestions"]).then(
                 response => (response.json()
                     .then(r => {
-                        const sug = r.suggestions.filter(sug => sug._id === this.id)[0]
+                        const sug = r.suggestions.filter(sug => sug._id === this.id)[0];
                         this.setState({
                             name: sug.author,
                             message: sug.message
@@ -95,7 +96,7 @@ class SuggestionForm extends React.Component {
         } else return (
             <AbstractCard>
                 <div className="row card-content">
-                    <span className="card-title">Please enter your name and suggestion below.</span>
+                    <CardTitle>Please enter your name and suggestion below.</CardTitle>
                     <form className="col s12" onSubmit={this.submit}>
                         <div className="row">
                             <div className="input-field col s12">

@@ -2,7 +2,7 @@ import React from "react";
 import {Route, Switch} from "react-router-dom";
 import Wout from "../Content/Wout";
 import Jonas from "../Content/Jonas";
-import Ardennen from "../Content/Ardennen";
+import Ardennen from "../Content/Ardennen/Ardennen";
 import Minecraft from "../Content/Minecraft";
 import Amber from "../Content/Amber";
 import Mira from "../Content/Mira";

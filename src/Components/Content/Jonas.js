@@ -3,6 +3,7 @@ import M from "materialize-css"
 import '../../style.css'
 import LoadingAnimation from "../LoadingAnimation";
 import AbstractCard from "../AbstractCard";
+import CardTitle from "../CardTitle";
 
 class Jonas extends React.Component {
 
@@ -44,7 +45,7 @@ class Jonas extends React.Component {
             return (
                 <AbstractCard>
                     <div className="card-content">
-                        <span className="card-title">Jonas is een dikke sloef</span>
+                        <CardTitle>Jonas is een dikke sloef</CardTitle>
                         <div>
                             <table>
                                 <tbody>

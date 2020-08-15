@@ -3,6 +3,7 @@ import moment from "moment";
 import AbstractCard from "../AbstractCard";
 import LoadingAnimation from "../LoadingAnimation";
 import M from "materialize-css";
+import CardTitle from "../CardTitle";
 
 class Amber extends React.Component {
 
@@ -19,7 +20,7 @@ class Amber extends React.Component {
 
     componentDidMount() {
         //this.intervalID = window.setInterval(() => {this.setState({duration: this.durationFormatter()})}, 25);
-        this.setState({duration: "Amber heeft genoeg cold hard cash verdiend."})
+        this.setState({duration: "Amber heeft genoeg cold hard cash verdiend."});
 
         const url = this.props.api["amber"];
         fetch(url).then(
@@ -47,13 +48,13 @@ class Amber extends React.Component {
     durationFormatter = () => {
         const duration = this.getDuration();
         return (`Nog ${duration.days()} dagen, ${duration.hours()} uren, ${duration.minutes()} minuten en ${duration.seconds()}.${duration.milliseconds()} seconden.`)
-    }
+    };
 
     getDuration = () => {
         const end = moment(new Date(2020, 6, 31, 13, 0, 0, 0));
         const diff = end.diff(moment());
         return moment.duration(diff);
-    }
+    };
 
     render() {
         const amber_brugge = <img className="materialboxed responsive-img" width="650"
@@ -69,7 +70,7 @@ class Amber extends React.Component {
             return (
                 <AbstractCard>
                     <div className="card-content">
-                        <span className="card-title">Hoelang moet Amber nog werken?</span>
+                        <CardTitle>Hoelang moet Amber nog werken?</CardTitle>
                         <p>{this.state.duration}</p>
                         {amber_brugge}
                     </div>

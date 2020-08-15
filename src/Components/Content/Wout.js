@@ -4,6 +4,7 @@ import '../../style.css'
 import LoadingAnimation from "../LoadingAnimation";
 import AbstractCard from "../AbstractCard";
 import {Link} from "react-router-dom";
+import CardTitle from "../CardTitle";
 
 class Wout extends React.Component {
 
@@ -48,7 +49,7 @@ class Wout extends React.Component {
             return (
                 <AbstractCard>
                     <div className="card-content">
-                        <span className="card-title">Wout pest de assistent van WebDev</span>
+                        <CardTitle>Wout pest de assistent van WebDev</CardTitle>
                         <div>
                             <h6>when you sudo reboot and it doesn't work anymore</h6>
                             <table>

@@ -1,5 +1,6 @@
 import React from "react";
-import AbstractCard from "../AbstractCard";
+import AbstractCard from "../../AbstractCard";
+import CardTitle from "../../CardTitle";
 
 class Ardennen extends React.Component {
 
@@ -12,7 +13,7 @@ class Ardennen extends React.Component {
         return (
             <AbstractCard>
                 <div className="card-content">
-                    <span className="card-title">Ardennen September 2020 - FAQ</span>
+                    <CardTitle>Ardennen September 2020 - FAQ</CardTitle>
                     <p>
                         <h6 className="underline semi-bold">Datum?</h6>
                         11-13 september.

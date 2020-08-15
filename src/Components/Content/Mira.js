@@ -3,6 +3,7 @@ import M from "materialize-css";
 import LoadingAnimation from "../LoadingAnimation";
 import {Link} from "react-router-dom";
 import AbstractCard from "../AbstractCard";
+import CardTitle from "../CardTitle";
 
 class Mira extends React.Component {
 
@@ -43,7 +44,7 @@ class Mira extends React.Component {
             return (
                 <AbstractCard>
                     <div className="card-content">
-                        <span className="card-title">Mira is een snitch</span>
+                        <CardTitle>Mira is een snitch</CardTitle>
                         <div>
                             <table>
                                 <tbody>

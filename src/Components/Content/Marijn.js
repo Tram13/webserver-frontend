@@ -1,5 +1,6 @@
 import React from "react";
 import AbstractCard from "../AbstractCard";
+import CardTitle from "../CardTitle";
 
 class Marijn extends React.Component {
 
@@ -13,11 +14,15 @@ class Marijn extends React.Component {
         return (
             <AbstractCard>
                 <div className="card-content">
-                    <span className="card-title">Marijn's YouTube Channel</span>
+                    <CardTitle>Marijn's YouTube Channel</CardTitle>
                     <p>Open Marijn's new YouTube channel: "Amerika in 't kort.</p>
                     <div className="card-action">
-                        <a href={this.link} rel="noopener noreferrer" target="_blank"><i
-                            className="material-icons right">open_in_new</i>Go to YouTube</a>
+                        <a href={this.link} rel="noopener noreferrer" target="_blank">
+                            <i className="material-icons right">
+                                open_in_new
+                            </i>
+                            Go to YouTube
+                        </a>
                     </div>
                 </div>
             </AbstractCard>

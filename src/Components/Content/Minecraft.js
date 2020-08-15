@@ -1,6 +1,7 @@
 import React from "react";
 import LoadingAnimation from "../LoadingAnimation";
 import AbstractCard from "../AbstractCard";
+import CardTitle from "../CardTitle";
 
 class Minecraft extends React.Component {
 
@@ -42,7 +43,7 @@ class Minecraft extends React.Component {
             return (
                 <AbstractCard>
                     <div className="card-content">
-                        <span className="card-title">Minecraft toegangsportaal</span>
+                        <CardTitle>Minecraft toegangsportaal</CardTitle>
                         <h6>Welkom op het wereldwijde web, 90s-style.</h6>
                         <p>
                             Koop hier je maandticket voor de SkyFactory-server! Huidige maand: mei

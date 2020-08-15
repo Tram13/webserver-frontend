@@ -2,6 +2,7 @@ import React from "react";
 import M from "materialize-css";
 import LoadingAnimation from "../LoadingAnimation";
 import AbstractCard from "../AbstractCard";
+import CardTitle from "../CardTitle";
 
 class Arnoud extends React.Component {
 
@@ -40,7 +41,7 @@ class Arnoud extends React.Component {
             return (
                 <AbstractCard content={
                     <div className="card-content">
-                        <span className="card-title">Arnoud is een chad.</span>
+                        <CardTitle>Arnoud is een chad.</CardTitle>
                         {arnoud_kijk}
                     </div>
                 }/>
