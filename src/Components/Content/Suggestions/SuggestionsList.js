@@ -10,6 +10,7 @@ class SuggestionsList extends React.Component {
         super(props);
         this.state = {data: {}, fetching: true};
         this.props.updateSelected("suggestions");
+        this.timeout = 10000 // 10 seconds
     };
 
     getSuggestions = () => {
@@ -28,8 +29,14 @@ class SuggestionsList extends React.Component {
     };
 
     componentDidMount() {
-        this.getSuggestions()
+        this.intervalID = window.setInterval(() => {this.getSuggestions()}, this.timeout);
     };
+
+    componentWillUnmount() {
+        if (this.intervalID !== undefined) {
+            clearInterval(this.intervalID);
+        }
+    }
 
     render() {
         const floatingAddButton = <div className="fixed-action-btn">
