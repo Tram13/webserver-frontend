@@ -68,7 +68,7 @@ class MainSwitch extends React.Component {
                     <Home api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
                 <Route>
-                    <Error404 updateSelected={this.updateSelected}/>
+                    <Error404 api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
             </Switch>
         )

@@ -7,14 +7,13 @@ class Error404 extends React.Component {
         this.props.updateSelected("");
     }
 
-
     render() {
         return (
             <div>
                 <table className={"centered"}>
                     <tbody>
                     <tr>
-                        <td><h1>404.</h1></td>
+                        <td><h1 className="right-align">404.</h1></td>
                         <td><h4>We couldn't find that page.</h4></td>
                     </tr>
                     </tbody>
