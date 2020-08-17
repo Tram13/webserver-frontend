@@ -49,8 +49,9 @@ class Wout extends React.Component {
             return (
                 <AbstractCard>
                     <div className="card-content">
-                        <CardTitle>Wout pest de assistent van WebDev</CardTitle>
+                        <CardTitle>Wout</CardTitle>
                         <div>
+                            <h6>Wout pest de assistent van WebDev.</h6>
                             <h6>when you sudo reboot and it doesn't work anymore</h6>
                             <table>
                                 <tbody>
@@ -64,6 +65,7 @@ class Wout extends React.Component {
                         <div>
                             <h6>when you do it again</h6>
                             {kop3}
+                            <h6>"Mijn eerste nacht met Mira was een niet zo rustige nacht." ~ Wout 2020</h6>
                         </div>
                         <br/>
                         <Link className="left" to="/mira">Mira is een cult.</Link>
