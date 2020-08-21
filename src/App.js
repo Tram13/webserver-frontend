@@ -5,6 +5,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import LoadingAnimation from "./Components/LoadingAnimation";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import MainSwitch from "./Components/Routes/MainSwitch";
+import {API_URL} from "./Constants/Constants";
 
 //TODO's:
 // pagina maken voor virtual drug dealer
@@ -18,7 +19,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {api: undefined, fetching: true};
-        this.url = "https://api.tram13.me"
+        this.url = API_URL
     }
 
     updateSelected = (selected) => {
