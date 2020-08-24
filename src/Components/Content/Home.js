@@ -42,7 +42,7 @@ class Home extends React.Component {
             return (
                 <AbstractCard>
                     <div className="card-content">
-                        <CardTitle>Geniet van de mooie content.</CardTitle>
+                        <CardTitle>In Kets we trust.</CardTitle>
                         {friendship}
                     </div>
                 </AbstractCard>
