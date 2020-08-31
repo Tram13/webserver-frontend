@@ -14,6 +14,7 @@ import {API_URL} from "./Constants/Constants";
 // Error 404 na bezoeken van ongeldige pagina in /suggestions en mooier maken
 // Categoriën toevoegen aan de suggesties
 // Cooldown zetten op suggesties toevoegen
+// Jonas heeft dyslexie- / dyscalculie-generator
 
 class App extends React.Component {
     constructor(props) {
