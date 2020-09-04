@@ -6,7 +6,8 @@ class PackingListList extends React.Component {
 
     constructor(props) {
         super(props);
-        this.url = "https://drive.google.com/file/d/1xsanjZGeKsEMLa1MV99TXXDTFlLcu5wG/view?usp=sharing";
+        this.props.updateSelected("ardennen");
+        this.link = "https://drive.google.com/file/d/1xsanjZGeKsEMLa1MV99TXXDTFlLcu5wG/view?usp=sharing";
     }
 
     render() {
@@ -25,7 +26,7 @@ class PackingListList extends React.Component {
                     </div>
                 </div>
             </AbstractCard>
-        )
+        );
     }
 }
 
