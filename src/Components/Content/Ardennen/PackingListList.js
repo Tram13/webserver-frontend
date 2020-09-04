@@ -10,7 +10,6 @@ class PackingListList extends React.Component {
     }
 
     render() {
-        console.log('hi');
         return (
             <AbstractCard>
                 <div className="card-content">
