@@ -1,6 +1,7 @@
 import React from "react";
 import AbstractCard from "../../AbstractCard/AbstractCard";
 import CardTitle from "../../AbstractCard/CardTitle";
+import {Link} from "react-router-dom";
 
 class Ardennen extends React.Component {
 
@@ -25,6 +26,7 @@ class Ardennen extends React.Component {
                         Welk concert?
                         <h6 className="underline semi-bold">Wat met Covid-19?</h6>
                         Fuck jullie allemaal.
+                        <Link className="left" to="/ardennen/packinglist">Packing list</Link>
                     </p>
                 </div>
             </AbstractCard>

@@ -66,7 +66,6 @@ class Wout extends React.Component {
                             {kop3}
                         </div>
                         <br/>
-                        <Link className="left" to="/mira">Mira is een cult.</Link>
                     </div>
                 </AbstractCard>
             )
