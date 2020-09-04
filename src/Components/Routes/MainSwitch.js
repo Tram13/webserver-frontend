@@ -51,7 +51,7 @@ class MainSwitch extends React.Component {
                     <Route exact path="/ardennen">
                         <Ardennen api={this.props.api} updateSelected={this.updateSelected}/>
                     </Route>
-                    <Route exact path="/suggestions/packinglist">
+                    <Route exact path="/ardennen/packinglist">
                         <PackingListList updateSelected={this.updateSelected}/>
                     </Route>
                 </Route>
