@@ -13,6 +13,7 @@ import SuggestionsList from "../Content/Suggestions/SuggestionsList";
 import SuggestionForm from "../Content/Suggestions/SuggestionForm";
 import Error404 from "../Error404";
 import PackingListList from "../Content/Ardennen/PackingListList";
+import Spelletje from "../Content/Ardennen/Spelletje";
 
 class MainSwitch extends React.Component {
 
@@ -53,6 +54,9 @@ class MainSwitch extends React.Component {
                     </Route>
                     <Route exact path="/ardennen/packinglist">
                         <PackingListList updateSelected={this.updateSelected}/>
+                    </Route>
+                    <Route exact path="/ardennen/spel">
+                        <Spelletje updateSelected={this.updateSelected}/>
                     </Route>
                 </Route>
                 <Route exact path="/minecraft">
