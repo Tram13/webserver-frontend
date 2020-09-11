@@ -27,6 +27,7 @@ class Ardennen extends React.Component {
                         <h6 className="underline semi-bold">Wat met Covid-19?</h6>
                         Fuck jullie allemaal.
                         <Link className="left" to="/ardennen/packinglist">Packing list</Link>
+                        <Link className="left" to="/ardennen/spel">puntenspel</Link>
                     </p>
                 </div>
             </AbstractCard>
