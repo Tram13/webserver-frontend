@@ -14,7 +14,6 @@ class NavBar extends React.Component {
             "jonas",
             "minecraft",
             "suggestions",
-            "ardennen",
             "drugdealer",
             "marijn",
             "mira",

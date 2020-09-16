@@ -6,7 +6,6 @@ class PackingListList extends React.Component {
 
     constructor(props) {
         super(props);
-        this.props.updateSelected("ardennen");
         this.link = "https://drive.google.com/file/d/1xsanjZGeKsEMLa1MV99TXXDTFlLcu5wG/view?usp=sharing";
     }
 

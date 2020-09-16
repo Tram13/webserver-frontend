@@ -6,7 +6,6 @@ class Spelletje extends React.Component {
 
     constructor(props) {
         super(props);
-        this.props.updateSelected("ardennen");
     }
 
     render() {
