@@ -1,12 +1,29 @@
 import React from "react";
-import AbstractCard from "../../AbstractCard/AbstractCard";
-import CardTitle from "../../AbstractCard/CardTitle";
+import AbstractCard from "../../../AbstractCard/AbstractCard";
+import CardTitle from "../../../AbstractCard/CardTitle";
 
 class PackingListList extends React.Component {
 
     constructor(props) {
         super(props);
-        this.link = "https://drive.google.com/file/d/1xsanjZGeKsEMLa1MV99TXXDTFlLcu5wG/view?usp=sharing";
+        this.state = {data: {}, fetching: true};
+    }
+
+    componentDidMount() {
+        const url = this.props.api["archief"];
+        fetch(url).then(
+            response => (response.json()
+                    .then((r) => {
+                            this.setState(
+                                {
+                                    data: r,
+                                    fetching: false
+                                }
+                            );
+                        }
+                    )
+            )
+        )
     }
 
     render() {

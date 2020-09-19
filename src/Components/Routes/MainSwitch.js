@@ -2,7 +2,7 @@ import React from "react";
 import {Route, Switch} from "react-router-dom";
 import Wout from "../Content/Wout";
 import Jonas from "../Content/Jonas";
-import Ardennen from "../Content/Ardennen/Ardennen";
+import Ardennen from "../Content/Archief/Ardennen/Ardennen";
 import Minecraft from "../Content/Minecraft";
 import Amber from "../Content/Amber";
 import Mira from "../Content/Mira";
@@ -12,8 +12,8 @@ import DrugDealer from "../Content/DrugDealer/DrugDealer";
 import SuggestionsList from "../Content/Suggestions/SuggestionsList";
 import SuggestionForm from "../Content/Suggestions/SuggestionForm";
 import Error404 from "../Error404";
-import PackingListList from "../Content/Ardennen/PackingListList";
-import Spelletje from "../Content/Ardennen/Spelletje";
+import PackingListList from "../Content/Archief/Ardennen/PackingListList";
+import Spelletje from "../Content/Archief/Ardennen/Spelletje";
 
 class MainSwitch extends React.Component {
 

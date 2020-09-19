@@ -1,8 +1,8 @@
 import React from "react";
-import AbstractCard from "../../AbstractCard/AbstractCard";
-import CardTitle from "../../AbstractCard/CardTitle";
+import AbstractCard from "../../../AbstractCard/AbstractCard";
+import CardTitle from "../../../AbstractCard/CardTitle";
 import {Link} from "react-router-dom";
-import LoadingAnimation from "../../LoadingAnimation";
+import LoadingAnimation from "../../../LoadingAnimation";
 
 class Ardennen extends React.Component {
 

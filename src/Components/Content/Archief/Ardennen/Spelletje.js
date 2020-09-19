@@ -1,6 +1,6 @@
 import React from "react";
-import AbstractCard from "../../AbstractCard/AbstractCard";
-import CardTitle from "../../AbstractCard/CardTitle";
+import AbstractCard from "../../../AbstractCard/AbstractCard";
+import CardTitle from "../../../AbstractCard/CardTitle";
 
 class Spelletje extends React.Component {
 
