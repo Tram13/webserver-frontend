@@ -2,7 +2,7 @@ import React from "react";
 import {Route, Switch} from "react-router-dom";
 import Wout from "../Content/Wout";
 import Jonas from "../Content/Jonas";
-import Ardennen from "../Content/Archief/Ardennen/Ardennen";
+import Ardennen from "../Content/Archief/Ardennen20200911/Ardennen";
 import Minecraft from "../Content/Minecraft";
 import Amber from "../Content/Amber";
 import Mira from "../Content/Mira";
@@ -12,8 +12,8 @@ import DrugDealer from "../Content/DrugDealer/DrugDealer";
 import SuggestionsList from "../Content/Suggestions/SuggestionsList";
 import SuggestionForm from "../Content/Suggestions/SuggestionForm";
 import Error404 from "../Error404";
-import PackingListList from "../Content/Archief/Ardennen/PackingListList";
-import Spelletje from "../Content/Archief/Ardennen/Spelletje";
+import PackingList from "../Content/Archief/Ardennen20200911/PackingList";
+import Spel from "../Content/Archief/Ardennen20200911/Spel";
 
 class MainSwitch extends React.Component {
 
@@ -49,14 +49,14 @@ class MainSwitch extends React.Component {
                     <Jonas api={this.props.api} updateSelected={this.updateSelected}/>
                 </Route>
                 <Route path="/archief">
-                    <Route exact path="/archief/ardennen-2020-2-v2">
+                    <Route exact path="/archief/ardennen20200911">
                         <Ardennen api={this.props.api}/>
                     </Route>
-                    <Route exact path="/archief/ardennen-2020-2-v2/packinglist">
-                        <PackingListList/>
+                    <Route exact path="/archief/ardennen20200911/packinglist">
+                        <PackingList api={this.props.api}/>
                     </Route>
-                    <Route exact path="/archief/ardennen-2020-2-v2/spel">
-                        <Spelletje/>
+                    <Route exact path="/archief/ardennen20200911/spel">
+                        <Spel/>
                     </Route>
                 </Route>
                 <Route exact path="/minecraft">

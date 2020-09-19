@@ -6,26 +6,27 @@ import LoadingAnimation from "../../../LoadingAnimation";
 
 class Ardennen extends React.Component {
 
-    export
-    default
-    Ardennen;
-
     constructor(props) {
         super(props);
         this.state = {data: {}, fetching: true};
     }
 
     componentDidMount() {
-        const url = this.props.api["archief"];
+        let url = this.props.api["archief"];
         fetch(url).then(
             response => (response.json()
                     .then((r) => {
-                            this.setState(
-                                {
-                                    data: r,
-                                    fetching: false
-                                }
-                            );
+                            url = r["ardennen20200911"];
+                            fetch(url).then(response => response.json())
+                                .then((r) => {
+                                        this.setState(
+                                            {
+                                                data: r,
+                                                fetching: false
+                                            }
+                                        );
+                                    }
+                                )
                         }
                     )
             )
@@ -54,11 +55,11 @@ class Ardennen extends React.Component {
                             <h6 className="semi-bold">Wat met Covid-19?</h6>
                             Fuck jullie allemaal.
                             <h6 className="semi-bold">Overige links</h6>
-                            <Link to="/archief/ardennen-2020-2-v2/packinglist">Packing list</Link>
+                            <Link to="/archief/ardennen20200911/packinglist">Packinglist</Link>
                             <br/>
-                            <Link to="/archief/ardennen-2020-2-v2/spel">Spelletje</Link>
+                            <Link to="/archief/ardennen20200911/spel">Spelletje</Link>
                             <br/>
-                            <a href={this.state.data["ardennen20200911"]}>Foto's</a>
+                            <a href={this.state.data["photos"]}>Foto's</a>
                         </p>
                     </div>
                 </AbstractCard>

@@ -2,7 +2,7 @@ import React from "react";
 import AbstractCard from "../../../AbstractCard/AbstractCard";
 import CardTitle from "../../../AbstractCard/CardTitle";
 
-class PackingListList extends React.Component {
+class PackingList extends React.Component {
 
     constructor(props) {
         super(props);
@@ -46,4 +46,4 @@ class PackingListList extends React.Component {
     }
 }
 
-export default PackingListList;
+export default PackingList;

@@ -9,7 +9,7 @@ import {API_URL} from "./Constants/Constants";
 
 //TODO's:
 // pagina maken voor virtual drug dealer
-// Ardennen
+// Ardennen20200911
 // Constanten opslaan in file
 // Error 404 na bezoeken van ongeldige pagina in /suggestions en mooier maken
 // Categoriën toevoegen aan de suggesties

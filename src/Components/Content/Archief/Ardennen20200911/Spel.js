@@ -2,11 +2,7 @@ import React from "react";
 import AbstractCard from "../../../AbstractCard/AbstractCard";
 import CardTitle from "../../../AbstractCard/CardTitle";
 
-class Spelletje extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
+class Spel extends React.Component {
 
     render() {
         return (
@@ -48,4 +44,4 @@ class Spelletje extends React.Component {
     }
 }
 
-export default Spelletje;
+export default Spel;
