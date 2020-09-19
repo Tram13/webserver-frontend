@@ -1,6 +1,8 @@
 import React from "react";
 import AbstractCard from "../../../AbstractCard/AbstractCard";
 import CardTitle from "../../../AbstractCard/CardTitle";
+import M from "materialize-css";
+import LoadingAnimation from "../../../LoadingAnimation";
 
 class PackingList extends React.Component {
 
@@ -10,16 +12,22 @@ class PackingList extends React.Component {
     }
 
     componentDidMount() {
-        const url = this.props.api["archief"];
+        let url = this.props.api["archief"];
         fetch(url).then(
             response => (response.json()
                     .then((r) => {
-                            this.setState(
-                                {
-                                    data: r,
-                                    fetching: false
-                                }
-                            );
+                            url = r["ardennen20200911"];
+                            fetch(url).then(response => response.json())
+                                .then((r) => {
+                                        this.setState(
+                                            {
+                                                data: r,
+                                                fetching: false
+                                            }
+                                        );
+                                    M.AutoInit();
+                                    }
+                                )
                         }
                     )
             )
@@ -27,22 +35,25 @@ class PackingList extends React.Component {
     }
 
     render() {
-        return (
-            <AbstractCard>
-                <div className="card-content">
-                    <CardTitle>Packing List</CardTitle>
-                    <p>Open de Packing List Excel-file</p>
-                    <div className="card-action">
-                        <a href={this.link} rel="noopener noreferrer" target="_blank">
-                            <i className="material-icons right">
-                                open_in_new
-                            </i>
-                            Go to Packing List
-                        </a>
+        const packinglist = <img className="materialboxed responsive-img" width="650"
+                                  src={this.state.data["packinglist"]}
+                                  alt="screenshot of packinglist"
+                                  data-caption="screenshot of packinglist"/>;
+
+        if (this.state.fetching) {
+            return (
+                <LoadingAnimation/>
+            )
+        } else {
+            return (
+                <AbstractCard>
+                    <div className="card-content">
+                        <CardTitle>Packing List</CardTitle>
+                        {packinglist}
                     </div>
-                </div>
-            </AbstractCard>
-        );
+                </AbstractCard>
+            );
+        }
     }
 }
 
