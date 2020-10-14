@@ -38,7 +38,6 @@ class Mira extends React.Component {
                             alt="Mira wordt gechoked" data-caption="Choke me daddy"/>;
         if (this.state.fetching) {
             return (
-
                 <LoadingAnimation/>
             )
         } else {
