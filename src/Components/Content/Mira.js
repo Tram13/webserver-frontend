@@ -32,9 +32,9 @@ class Mira extends React.Component {
     }
 
     render() {
-        const mira_1 = <img className="materialboxed responsive-img" width="650" src={this.state.data["mira_tekening"]}
+        const mira_1 = <img className="materialboxed responsive-img center-block" width="650" src={this.state.data["mira_tekening"]}
                             alt="Tekening van Mira" data-caption="Jonas heeft Mira getekend."/>;
-        const mira_2 = <img className="materialboxed responsive-img" width="650" src={this.state.data["mira_choke"]}
+        const mira_2 = <img className="materialboxed responsive-img center-block" width="650" src={this.state.data["mira_choke"]}
                             alt="Mira wordt gechoked" data-caption="Choke me daddy"/>;
         if (this.state.fetching) {
             return (
@@ -53,8 +53,8 @@ class Mira extends React.Component {
                                     <td className="center"><Link to="/wout">@Wout</Link></td>
                                 </tr>
                                 <tr className={"no-border"}>
-                                    <td>{mira_1}</td>
-                                    <td>{mira_2}</td>
+                                    <td className="photo-collage">{mira_1}</td>
+                                    <td className="photo-collage">{mira_2}</td>
                                 </tr>
                                 </tbody>
                             </table>

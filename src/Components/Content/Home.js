@@ -32,7 +32,7 @@ class Home extends React.Component {
     }
 
     render() {
-        const friendship = <img className="materialboxed responsive-img" width="650" src={this.state.data["friendship"]}
+        const friendship = <img className="materialboxed responsive-img center-block" width="650" src={this.state.data["friendship"]}
                           alt="Friendship is beautiful"/>;
         if (this.state.fetching) {
             return (

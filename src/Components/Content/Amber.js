@@ -57,7 +57,7 @@ class Amber extends React.Component {
     };
 
     render() {
-        const amber_brugge = <img className="materialboxed responsive-img" width="650"
+        const amber_brugge = <img className="materialboxed responsive-img center-block" width="650"
                                   src={this.state.data["amber_brugge"]}
                                   alt="Amber in Brugge"
                                   data-caption="Amber in Brugge"/>;

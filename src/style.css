@@ -32,3 +32,6 @@ body {
 h6.semi-bold {
     font-weight: 550;
 }
+td.photo-collage {
+    vertical-align: top !important;
+}

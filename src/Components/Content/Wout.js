@@ -33,11 +33,11 @@ class Wout extends React.Component {
     }
 
     render() {
-        const kop1 = <img className="materialboxed responsive-img" width="650" src={this.state.data["kop1"]}
+        const kop1 = <img className="materialboxed responsive-img center-block" width="650" src={this.state.data["kop1"]}
                           alt="Kop 1"/>;
-        const kop2 = <img className="materialboxed responsive-img" width="650" src={this.state.data["kop2"]}
+        const kop2 = <img className="materialboxed responsive-img center-block" width="650" src={this.state.data["kop2"]}
                           alt="Kop 2"/>;
-        const kop3 = <img className="materialboxed responsive-img" width="650" src={this.state.data["kop3"]}
+        const kop3 = <img className="materialboxed responsive-img center-block" width="650" src={this.state.data["kop3"]}
                           alt="Kop 3"/>;
 
 
@@ -55,8 +55,8 @@ class Wout extends React.Component {
                             <table>
                                 <tbody>
                                 <tr className={"no-border"}>
-                                    <td>{kop1}</td>
-                                    <td>{kop2}</td>
+                                    <td className="photo-collage">{kop1}</td>
+                                    <td className="photo-collage">{kop2}</td>
                                 </tr>
                                 </tbody>
                             </table>
