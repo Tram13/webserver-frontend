@@ -37,6 +37,7 @@ class Mira extends React.Component {
         const mira_2 = <img className="materialboxed responsive-img center-block" width="650" src={this.state.data["mira_choke"]}
                             alt="Mira wordt gechoked" data-caption="Choke me daddy"/>;
         if (this.state.fetching) {
+
             return (
                 <LoadingAnimation/>
             )

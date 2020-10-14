@@ -15,6 +15,7 @@ import {API_URL} from "./Constants/Constants";
 // Categoriën toevoegen aan de suggesties
 // Cooldown zetten op suggesties toevoegen
 // Jonas heeft dyslexie- / dyscalculie-generator
+// Github webhook die auto sudo update webserver doet ofzo
 
 class App extends React.Component {
     constructor(props) {
