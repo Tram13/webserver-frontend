@@ -27,7 +27,16 @@ table.highlight>tbody>tr:hover {
     background-color: #ffcdd2 !important;
 }
 body {
+    background-image: url("https://api.tram13.me/imageOfDay/earthPorn");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
     background-color: #ffebee;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 h6.semi-bold {
     font-weight: 550;
