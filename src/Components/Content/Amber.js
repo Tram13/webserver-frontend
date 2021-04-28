@@ -73,6 +73,7 @@ class Amber extends React.Component {
                         <CardTitle>Hoelang moet Amber nog werken?</CardTitle>
                         <p>{this.state.duration}</p>
                         {amber_brugge}
+                        <p>Amber is geen fan van Lindsay.</p>
                     </div>
                 </AbstractCard>
             )
